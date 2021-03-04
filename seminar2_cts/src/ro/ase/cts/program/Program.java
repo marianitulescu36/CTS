@@ -9,10 +9,13 @@ import ro.ase.cts.clase.Aplicant;
 
 public class Program {
  
+	public static List<Aplicant> citesteAplicanti(String numeFisier, AplicantReader reader) throws FileNotFoundException {
+		return reader.readAplicanti(numeFisier);
+	}
 	public static void main(String[] args) {
 		List<Aplicant> listaAngajati;
 		try {
-			listaAngajati = AngajatReader.readAngajati("angajati.txt"); // acum, daca vrem sa citim si elevi/studenti, vom modifica doar aceasta linie
+			listaAngajati = citesteAplicanti("angajati.txt", new AngajatReader());
 			for(Aplicant angajat:listaAngajati)
 				System.out.println(angajat.toString());
 		} catch (FileNotFoundException e) {
