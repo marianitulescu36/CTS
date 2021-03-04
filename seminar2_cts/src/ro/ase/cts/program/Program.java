@@ -8,7 +8,7 @@ import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
 
 public class Program {
-
+ 
 	public static void main(String[] args) {
 		List<Aplicant> listaAngajati;
 		try {
